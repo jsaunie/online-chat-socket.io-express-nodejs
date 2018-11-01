@@ -6,13 +6,16 @@ app.get( '/', function (req, res) {
     res.sendFile( __dirname + '/index.html' )
 } );
 
+let userId = 0;
 io.on( 'connection', function (socket) {
-    console.log( 'a user connected' );
+    const user = userId++;
+    io.emit( 'chat message', `The user ${user} is connected!` );
+    
     socket.on( 'disconnect', function () {
-        console.log( 'user disconnected' );
+        io.emit( 'chat message', `The user ${user} is disconnected!` );
     } );
     socket.on( 'chat message', function (msg) {
-        console.log( 'message: ' + msg );
+        io.emit( 'chat message', { user, msg } );
     } );
 } );
 
