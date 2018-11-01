@@ -1,0 +1,22 @@
+{
+  "name": "web-socket-nodejs",
+  "version": "1.0.0",
+  "description": "\"# web-socket-nodejs\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsaunie/web-socket-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsaunie/web-socket-nodejs/issues"
+  },
+  "homepage": "https://github.com/jsaunie/web-socket-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
